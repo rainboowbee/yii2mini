@@ -24,7 +24,7 @@ $this->title = yii::$app->name;
                             <div class="col-md-12">
                                 <div class="single-post-big">
                                     <div class="big-image">
-                                        <img src="/img/post-image1.jpg" alt="">
+                                        <img src="img/post-image1.jpg" alt="">
                                     </div>
                                     <div class="big-text">
                                         <h3><a href="#">Post Title Goes Here.</a></h3>
