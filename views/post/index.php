@@ -24,7 +24,7 @@ $this->title = yii::$app->name;
                             <div class="col-md-12">
                                 <div class="single-post-big">
                                     <div class="big-image">
-                                        <img src="img/post-image1.jpg" alt="">
+                                        <img src="/img/post-image1.jpg" alt="">
                                     </div>
                                     <div class="big-text">
                                         <h3><a href="#">Post Title Goes Here.</a></h3>
@@ -39,8 +39,13 @@ $this->title = yii::$app->name;
                             <div class="col-md-3">
                                 <div class="single-post">
                                     <?= \yii\helpers\Html::img("@web/{$post->img}") ?>
-                                    <h3><a href="<?= \yii\helpers\Url::to(['post/view', 'id' => $post->id]) ?>"><?= $post->title ?></a></h3>
+                                    <h3><a href="<?= \yii\helpers\Url::to(['post/view', 'id' => $post->id]) ?>">
+                                        <?= $post->title ?></a>
+                                    </h3>
                                     <h4><span>Category: <span class="author-name"><?= $post->category->title ?></span></span>
+                                        <a href="<?= \yii\helpers\Url::to(['category/view', 'alias' => $post->category->alias])?>">
+                                        <?= $post->category->title ?>
+                                        </a>
                                     </h4>
                                     <?= $post->exerpt ?>
                                     <h4><span><?= Yii::$app->formatter->asDate($post->created_at) ?></span></h4>
